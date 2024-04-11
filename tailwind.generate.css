@@ -39,10 +39,10 @@ body {
       text-shadow: none;
       @apply text-xl bg-gray-100 bg-none border-black border-2 text-black shadow-none mx-0 my-1.5 px-2 py-0;
       &.active {
-        @apply bg-none border-black border-2;
+        @apply bg-none border-black border-2 bg-[#970f53] !important;
       }
       a {
-        @apply border-black border-l-2;
+        @apply border-black border-l-2 !important;
       }
     }
   }
@@ -56,5 +56,12 @@ body {
         }
       }
     }
+  }
+}
+
+.flatpickr-wrapper {
+  @apply w-full;
+  .flatpickr-calendar {
+    @apply left-1/2 top-full mt-5 -translate-x-1/2 animate-none !important;
   }
 }

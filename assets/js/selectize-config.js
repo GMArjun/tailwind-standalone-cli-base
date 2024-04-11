@@ -70,7 +70,7 @@ const talents = [
 ];
 
 $(function () {
-  $("select").selectize({
+  $("#talent-selection").selectize({
     plugins: ["remove_button"],
     maxItems: null,
     valueField: "id",
