@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/selectize.default.min.css" />
     <link rel="stylesheet" href="./assets/css/global.css" />
   </head>
 
@@ -26,7 +27,7 @@
       </div>
     </header>
     <main class="min-h-screen">
-      <div class="max-w-screen-2xl w-full mx-auto">
+      <div class="max-w-screen-2xl w-full mx-auto px-10">
         <div class="swiper banner">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -46,9 +47,103 @@
           </div>
           <div class="swiper-pagination banner-pagination"></div>
         </div>
+
+        <div class="max-w-screen-sm w-full mx-auto my-10">
+          <select
+            id="talent-selection"
+            placeholder="Sélectionner dans la liste"
+            multiple
+          ></select>
+        </div>
       </div>
     </main>
   </body>
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <script src="./assets/js/swiper-config.js"></script>
+  <script src="./assets/js/selectize.min.js"></script>
+  <script>
+    const talents = [
+      {
+        id: 1,
+        title: "Figurant",
+      },
+      {
+        id: 2,
+        title: "Mannequin",
+      },
+      {
+        id: 3,
+        title: "Acteur",
+      },
+      {
+        id: 4,
+        title: "Comédien",
+      },
+      {
+        id: 5,
+        title: "Model photo",
+      },
+      {
+        id: 6,
+        title: "Influenceurs",
+      },
+      {
+        id: 7,
+        title: "Chanteur / Rappeur",
+      },
+      {
+        id: 8,
+        title: "Dj / Beat maker",
+      },
+      {
+        id: 9,
+        title: "Musicien",
+      },
+      {
+        id: 10,
+        title: "Styliste de mode",
+      },
+      {
+        id: 11,
+        title: "Danseur",
+      },
+      {
+        id: 12,
+        title: "Acrobate / Cascadeur",
+      },
+      {
+        id: 13,
+        title: "Maquilleur",
+      },
+      {
+        id: 14,
+        title: "Photographe",
+      },
+      {
+        id: 15,
+        title: "Vidéaste",
+      },
+      {
+        id: 16,
+        title: "Animateur",
+      },
+      {
+        id: 17,
+        title: "Scénariste",
+      },
+    ];
+
+    $(function () {
+      $("select").selectize({
+        plugins: ["remove_button", "auto_position"],
+        maxItems: null,
+        valueField: "id",
+        labelField: "title",
+        searchField: "title",
+        options: talents,
+        create: false,
+      });
+    });
+  </script>
 </html>
