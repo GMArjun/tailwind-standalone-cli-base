@@ -21,17 +21,23 @@ body {
 
 .swiper-pagination.banner-pagination {
   @apply bottom-10;
+  .swiper-pagination-bullet {
+    @apply bg-white h-4 w-4 opacity-20;
+    &.swiper-pagination-bullet-active {
+      @apply bg-black opacity-100;
+    }
+  }
 }
 
 .selectize-control.multi {
   .selectize-input {
-    @apply border-4 border-black p-3 inline-flex flex-wrap gap-3 min-h-[67.43px] !important;
+    @apply border-4 border-black p-3 inline-flex flex-wrap gap-x-3 min-h-[79.5px] !important;
     input {
       @apply text-xl;
     }
     .item {
       text-shadow: none;
-      @apply text-xl bg-gray-100 bg-none border-black border-2 text-black shadow-none m-0 px-2 py-0;
+      @apply text-xl bg-gray-100 bg-none border-black border-2 text-black shadow-none mx-0 my-1.5 px-2 py-0;
       &.active {
         @apply bg-none border-black border-2;
       }
@@ -41,12 +47,12 @@ body {
     }
   }
   .selectize-dropdown {
-    @apply border-black border-4;
+    @apply border-black border-4 static;
     .selectize-dropdown-content {
       .option {
-        @apply text-xl;
-        &.active{
-            @apply bg-gray-100
+        @apply text-xl text-left px-3 select-none;
+        &.active {
+          @apply bg-gray-100;
         }
       }
     }

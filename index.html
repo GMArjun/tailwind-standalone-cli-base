@@ -26,34 +26,62 @@
         </a>
       </div>
     </header>
-    <main class="min-h-screen">
-      <div class="max-w-screen-2xl w-full mx-auto px-10">
+    <main>
+      <div class="max-w-screen-2xl w-full mx-auto">
         <div class="swiper banner">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img
-                src="./assets/images/samplebanner1.jpg"
-                class="w-full h-full"
-                alt="banner"
-              />
+              <div class="lg:aspect-[3/1] relative overflow-hidden">
+                <img
+                  class="hidden lg:block w-full"
+                  src="./assets/images/landingbanner_xl.png"
+                  alt="banner"
+                />
+                <img
+                  class="lg:hidden w-full"
+                  src="./assets/images/landingbanner.png"
+                  alt="banner"
+                />
+              </div>
             </div>
             <div class="swiper-slide">
-              <img
-                src="./assets/images/samplebanner1.jpg"
-                class="w-full h-full object-cover"
-                alt="banner"
-              />
+              <div class="lg:aspect-[3/1] relative overflow-hidden">
+                <img
+                  class="hidden lg:block w-full"
+                  src="./assets/images/landingbanner_xl.png"
+                  alt="banner"
+                />
+                <img
+                  class="lg:hidden w-full"
+                  src="./assets/images/landingbanner.png"
+                  alt="banner"
+                />
+              </div>
             </div>
           </div>
           <div class="swiper-pagination banner-pagination"></div>
         </div>
 
-        <div class="max-w-screen-sm w-full mx-auto my-10">
-          <select
-            id="talent-selection"
-            placeholder="Sélectionner dans la liste"
-            multiple
-          ></select>
+        <div class="my-10 px-10">
+          <h1 class="font-bold text-3xl text-center">
+            Crée ton profil et découvre tous les castings maintenant !
+          </h1>
+          <div class="max-w-xl w-full mx-auto mt-16 text-center">
+            <h2 class="text-2xl font-bold mb-6">Quels sont tes talents?</h2>
+            <select
+              id="talent-selection"
+              placeholder="Sélectionner dans la liste"
+              multiple
+            ></select>
+            <button
+              class="text-xl mt-16 bg-black text-[#aef98c] p-3 rounded-full w-full"
+            >
+              Valider
+            </button>
+            <p class="mt-16 text-xl text-center">
+              La répertoire de talent n°1 au Sénégal.
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -62,88 +90,5 @@
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <script src="./assets/js/swiper-config.js"></script>
   <script src="./assets/js/selectize.min.js"></script>
-  <script>
-    const talents = [
-      {
-        id: 1,
-        title: "Figurant",
-      },
-      {
-        id: 2,
-        title: "Mannequin",
-      },
-      {
-        id: 3,
-        title: "Acteur",
-      },
-      {
-        id: 4,
-        title: "Comédien",
-      },
-      {
-        id: 5,
-        title: "Model photo",
-      },
-      {
-        id: 6,
-        title: "Influenceurs",
-      },
-      {
-        id: 7,
-        title: "Chanteur / Rappeur",
-      },
-      {
-        id: 8,
-        title: "Dj / Beat maker",
-      },
-      {
-        id: 9,
-        title: "Musicien",
-      },
-      {
-        id: 10,
-        title: "Styliste de mode",
-      },
-      {
-        id: 11,
-        title: "Danseur",
-      },
-      {
-        id: 12,
-        title: "Acrobate / Cascadeur",
-      },
-      {
-        id: 13,
-        title: "Maquilleur",
-      },
-      {
-        id: 14,
-        title: "Photographe",
-      },
-      {
-        id: 15,
-        title: "Vidéaste",
-      },
-      {
-        id: 16,
-        title: "Animateur",
-      },
-      {
-        id: 17,
-        title: "Scénariste",
-      },
-    ];
-
-    $(function () {
-      $("select").selectize({
-        plugins: ["remove_button", "auto_position"],
-        maxItems: null,
-        valueField: "id",
-        labelField: "title",
-        searchField: "title",
-        options: talents,
-        create: false,
-      });
-    });
-  </script>
+  <script src="./assets/js//talent-selector.js"></script>
 </html>
