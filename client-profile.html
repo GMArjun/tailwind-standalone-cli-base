@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/selectize.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/skeletabs.css">
+    <link rel="stylesheet" href="./assets/css/prettydropdown.css">
+    <link rel="stylesheet" href="./assets/css/global.css" />
+</head>
+
+<body>
+    <header class="border-b-4 border-black top-0 sticky z-10 bg-white">
+        <div class="max-w-screen-2xl w-full mx-auto flex items-center gap-5 py-2 px-4 lg:px-10 justify-between">
+            <img class="h-20 hidden lg:block" src="./assets/images/icons/logo.png" alt="logo" />
+            <img class="h-12 lg:hidden" src="./assets/images/icons/logo_simple.png" alt="logo" />
+            <div class="gap-10 flex-shrink-0 hidden lg:flex">
+                <a href="#" class="lg:text-xl">Castings</a>
+                <a href="#" class="lg:text-xl font-bold">Mon Profil</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="font-bold truncate hidden sm:block">Customer Name</span>
+                <img class="h-14 flex-shrink-0"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ&s"
+                    alt="profile">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="max-w-screen-2xl w-full mx-auto px-4 lg:px-10">
+            <div class="use-drop" id="profile-container">
+                <ul class="skltbs-tab-group">
+                    <li class="skltbs-tab-item">
+                        <button class="skltbs-tab">Résumé</button>
+                    </li>
+                    <li class="skltbs-tab-item">
+                        <button class="skltbs-tab">Hello</button>
+                    </li>
+                </ul>
+                <div class="skltbs-panel-group">
+                    <div class="skltbs-panel">
+                        <div>
+                            <h1 class="text-3xl font-bold">Customer Name</h1>
+                            <div class="flex gap-10">
+                                <div class="flex-none w-[540px]">
+                                    <div class="border-4 border-black aspect-square relative my-10">
+                                        <input id="profile-uploader" type="file" accept="image/*"
+                                            class="absolute top-0 left-0 h-full w-full z-10 opacity-0 cursor-pointer">
+                                        <div id="profile-uploader-placeholder"
+                                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                                            <img class="h-auto w-28 flex-shrink-0 self-center"
+                                                src="https://t4.ftcdn.net/jpg/04/81/13/43/360_F_481134373_0W4kg2yKeBRHNEklk4F9UXtGHdub3tYk.jpg"
+                                                alt="img">
+                                            <p class="font-bold text-xl">Photo de Couverture</p>
+                                        </div>
+                                        <div id="profile-uploaded-image"
+                                            class="absolute h-full w-full bg-center bg-cover bg-no-repeat z-0"></div>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex flex-col gap-5 my-10">
+                                        <div class="flex gap-10">
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="gender" class="mb-2 font-bold text-xl">Gender</label>
+                                                    <select id="gender" class="pretty">
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="height" class="mb-2 font-bold text-xl">Height</label>
+                                                    <input placeholder="Height" id="height"
+                                                        class="p-3 border-4 border-black text-xl" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="age" class="mb-2 font-bold text-xl">Age</label>
+                                                    <input placeholder="Age" id="age"
+                                                        class="p-3 border-4 border-black text-xl" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="talents" class="mb-2 font-bold text-xl"> Talents</label>
+                                                    <select id="talent-selection"
+                                                        placeholder="Sélectionner dans la liste" multiple></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="country" class="mb-2 font-bold text-xl">Country</label>
+                                                    <select id="country" class="pretty">
+                                                        <option value="1">Country 1</option>
+                                                        <option value="2">Country 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="region" class="mb-2 font-bold text-xl">Region</label>
+                                                    <select id="region" class="pretty">
+                                                        <option value="1">Region 1</option>
+                                                        <option value="2">Region 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-10">
+                                            <div class="form-group flex-1">
+                                                <div class="flex flex-col">
+                                                    <label for="info" class="mb-2 font-bold text-xl"> Physical
+                                                        Characteristics</label>
+                                                    <textarea placeholder="Physical Characteristics"
+                                                        class="p-3 border-4 border-black text-xl" id="info" cols="30"
+                                                        rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <button class="text-xl bg-black text-[#aef98c] p-3 rounded-full w-52">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="skltbs-panel">
+                        Hello
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="progress border-4 border-black rounded-full relative overflow-hidden bg-gray-200 max-w-3xl mx-auto w-full my-16">
+                <div class="absolute bg-[#f27200] h-full top-1/2 -translate-y-1/2 rounded-full left-0 z-0"
+                    style="width:5%"></div>
+                <div class="text-center text-xl font-bold relative z-10">Profil complet à 5%</div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+</body>
+<script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+<script src="./assets/js/selectize.min.js"></script>
+<script src="./assets/js/selectize-config.js"></script>
+
+<script src="./assets/js/skeletabs.js"></script>
+<script>$('#profile-container').skeletabs({
+        history: false
+    })
+</script>
+
+<script>
+    // Script for File Uploader
+    $(document).ready(function () {
+        $('#profile-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#profile-uploaded-image')
+                        .css('background-image', `url(${e.target.result})`)
+                        .removeClass('hidden');
+
+                    $('#profile-uploader-placeholder').addClass('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+
+</script>
+
+<script src="./assets/js/prettydropdown.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.pretty').prettyDropdown();
+    });
+</script>
+
+</html>

@@ -72,3 +72,14 @@ body {
     filter: drop-shadow(0px 20px 6px #9ca3af);
   }
 }
+
+.prettydropdown {
+  @apply w-full h-[60px] !important;
+  ul {
+    @apply border-4 border-black box-border max-h-max p-0.5 !important;
+  }
+  ul,
+  li {
+    @apply w-full text-xl leading-[48px] !important;
+  }
+}
