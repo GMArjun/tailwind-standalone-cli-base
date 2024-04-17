@@ -74,13 +74,22 @@ body {
 }
 
 .prettydropdown {
+  &.disabled{
+    @apply opacity-100 bg-gray-200 cursor-not-allowed !important;
+    ul{
+      @apply bg-gray-200 !important;
+    }
+    li{
+      @apply text-gray-400 !important;
+    }
+  }
   @apply w-full h-[60px] !important;
   ul {
     @apply border-4 border-black box-border max-h-max p-0.5 !important;
   }
   ul,
   li {
-    @apply w-full text-xl leading-[48px] !important;
+    @apply w-full text-[22px] leading-[48px] !important;
   }
 }
 

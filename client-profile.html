@@ -23,11 +23,27 @@
             </div>
             <div class="flex items-center gap-3">
                 <span class="font-bold truncate hidden sm:block">Customer Name</span>
-                <img class="h-14 flex-shrink-0"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ&s"
-                    alt="profile">
+                <div class="dropdown-container relative inline-block text-left">
+                    <button type="button" class="dropdown-button ">
+                        <img class="h-14 flex-shrink-0"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ&s"
+                            alt="profile">
+                    </button>
+                    <div
+                        class="dropdown-menu hidden origin-top-right absolute overflow-hidden right-0 min-w-[100px] rounded-md shadow-lg bg-white ">
+                        <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
+                            <a href="#" class="lg:hidden whitespace-nowrap text-center px-4 py-2 hover:bg-gray-100"
+                                role="menuitem">Castings</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap text-center px-4 py-2 hover:bg-gray-100"
+                                role="menuitem">Mon Profil</a>
+                            <a href="#" class=" whitespace-nowrap text-center px-4 py-2 hover:bg-gray-100"
+                                role="menuitem">Logout</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+
     </header>
     <main>
         <div class="use-drop" id="profile-container">
@@ -89,7 +105,7 @@
                                         <div class="flex flex-col">
                                             <label for="height" class="mb-2 font-bold text-xl">Height</label>
                                             <input placeholder="Height" id="height"
-                                                class="p-3 border-4 border-black text-xl disabled:bg-gray-300"
+                                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
                                                 type="text">
                                         </div>
                                     </div>
@@ -97,7 +113,7 @@
                                         <div class="flex flex-col">
                                             <label for="age" class="mb-2 font-bold text-xl">Age</label>
                                             <input placeholder="Age" id="age"
-                                                class="p-3 border-4 border-black text-xl disabled:bg-gray-300"
+                                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
                                                 type="text">
                                         </div>
                                     </div>
@@ -137,8 +153,8 @@
                                         <label for="info" class="mb-2 font-bold text-xl"> Physical
                                             Characteristics</label>
                                         <textarea placeholder="Physical Characteristics"
-                                            class="p-3 border-4 border-black text-xl disabled:bg-gray-300" id="info"
-                                            cols="30" rows="10"></textarea>
+                                            class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                            id="info" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +243,7 @@
 
 
                     <div class="skltbs-panel">
-                        <div class="grid gap-4 lg:gap-6">
+                        <div class="grid gap-4 lg:gap-6 mt-6">
                             <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                                 <div class="form-group flex-1">
                                     <div class="flex flex-col">
@@ -255,7 +271,7 @@
                                         <div class="flex flex-col">
                                             <label for="age" class="mb-2 font-bold text-xl">Age</label>
                                             <input placeholder="Age" disabled id="age"
-                                                class="p-3 border-4 border-black text-xl disabled:bg-gray-300"
+                                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
                                                 type="text">
                                         </div>
                                     </div>
@@ -301,7 +317,8 @@
 
 
                     <div class="skltbs-panel">
-                        <h1>Copy Paste the Fields based on the Requirement! Please Maintain Same HTML Structure</h1>
+                        <h1 class="mt-6">Copy Paste the Fields based on the Requirement! Please Maintain Same HTML
+                            Structure</h1>
                         <div class="flex justify-center my-10">
                             <button class="text-xl bg-black text-[#aef98c] p-3 rounded-full w-52">
                                 Save
@@ -311,7 +328,8 @@
 
 
                     <div class="skltbs-panel">
-                        <h1>Copy Paste the Fields based on the Requirement! Please Maintain Same HTML Structure</h1>
+                        <h1 class="mt-6">Copy Paste the Fields based on the Requirement! Please Maintain Same HTML
+                            Structure</h1>
                         <div class="flex justify-center my-10">
                             <button class="text-xl bg-black text-[#aef98c] p-3 rounded-full w-52">
                                 Save
@@ -335,8 +353,6 @@
     </main>
 
 
-
-
 </body>
 <script src="./assets/js/jquery-3.7.1.min.js"></script>
 
@@ -347,7 +363,7 @@
 <script>
     $('#profile-container').skeletabs({
         history: false,
-        startIndex: 2,
+        startIndex: 0,
         transitionDuration: 200
     })
 </script>
@@ -407,6 +423,26 @@
     $(document).ready(function () {
         $('.pretty').prettyDropdown();
     });
+</script>
+
+
+<script>
+    // script for dropdown
+    $(document).ready(function () {
+        $(document).on('click', '.dropdown-button', function () {
+            var dropdownMenu = $(this).next('.dropdown-menu');
+            dropdownMenu.toggleClass('hidden');
+        });
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown-container').length) {
+                $('.dropdown-menu').addClass('hidden');
+            }
+        });
+        $(document).on('click', '.dropdown-menu a', function () {
+            $('.dropdown-menu').addClass('hidden');
+        });
+    });
+
 </script>
 
 </html>
