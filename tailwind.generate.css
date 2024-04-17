@@ -74,12 +74,12 @@ body {
 }
 
 .prettydropdown {
-  &.disabled{
+  &.disabled {
     @apply opacity-100 bg-gray-200 cursor-not-allowed !important;
-    ul{
+    ul {
       @apply bg-gray-200 !important;
     }
-    li{
+    li {
       @apply text-gray-400 !important;
     }
   }
@@ -113,5 +113,8 @@ body {
         @apply bg-black border-4 border-black text-white p-1 min-w-40 rounded-xl;
       }
     }
+  }
+  .skltbs-panel {
+    @apply p-2 border md:border-0 border-black;
   }
 }
