@@ -114,7 +114,4 @@ body {
       }
     }
   }
-  .skltbs-panel {
-    @apply p-2 md:p-0 border md:border-0 border-black;
-  }
 }
