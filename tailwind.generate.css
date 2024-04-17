@@ -83,3 +83,26 @@ body {
     @apply w-full text-xl leading-[48px] !important;
   }
 }
+
+.skltbs-tab-group {
+  @apply flex flex-wrap gap-4 text-xl;
+  .skltbs-tab-item {
+    .skltbs-tab {
+      @apply bg-black border-4 border-black text-white py-1 px-4 min-w-40 rounded-xl;
+      &.skltbs-active {
+        @apply text-yellow-400  border-yellow-400;
+      }
+    }
+  }
+}
+.skltbs-panel-group {
+  .skltbs-panel-heading {
+    @apply bg-[#650a27] text-xl text-white p-3;
+    .skltbs-tab {
+      @apply w-full;
+      &.skltbs-active {
+        @apply bg-black border-4 border-black text-white p-1 min-w-40 rounded-xl;
+      }
+    }
+  }
+}
