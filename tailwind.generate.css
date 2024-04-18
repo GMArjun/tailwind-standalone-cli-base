@@ -91,6 +91,11 @@ body {
   li {
     @apply w-full text-[22px] leading-[48px] !important;
   }
+  li {
+    &.disabled {
+      cursor: pointer !important;
+    }
+  }
 }
 
 .skltbs-tab-group {
