@@ -152,3 +152,7 @@ body {
     }
   }
 }
+
+#detailed{
+  @apply p-0 pb-4 max-w-4xl w-full;
+}
