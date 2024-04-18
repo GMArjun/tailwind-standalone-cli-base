@@ -29,6 +29,16 @@ body {
   }
 }
 
+.testimonal-pagination {
+  @apply -bottom-1 !important;
+  .swiper-pagination-bullet {
+    @apply bg-black h-4 w-4 opacity-20;
+    &.swiper-pagination-bullet-active {
+      @apply bg-black opacity-100;
+    }
+  }
+}
+
 .selectize-control.multi {
   .selectize-input {
     @apply border-4 border-black p-3 inline-flex flex-wrap gap-x-3 !important;
@@ -119,4 +129,8 @@ body {
       }
     }
   }
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply scale-50 text-black;
 }
