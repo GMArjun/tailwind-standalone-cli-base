@@ -14,7 +14,8 @@
 
 <body>
     <header class="border-b-4 border-black top-0 sticky z-10 bg-white">
-        <div class="max-w-screen-2xl w-full mx-auto flex items-center gap-5 md:gap-8 py-3 px-4 lg:px-10 justify-between">
+        <div
+            class="max-w-screen-2xl w-full mx-auto flex items-center gap-5 md:gap-8 py-3 px-4 lg:px-10 justify-between">
             <img class="h-16 hidden lg:block" src="./assets/images/icons/logo.png" alt="logo" />
             <img class="h-12 lg:hidden" src="./assets/images/icons/logo_simple.png" alt="logo" />
             <div class="gap-8 flex-shrink-0 hidden lg:flex">
@@ -64,98 +65,107 @@
             </div>
     </header>
     <main>
-        <div class="max-w-screen-lg w-full mx-auto px-4 lg:px-10 py-4 mb-3 min-h-screen">
-            <h1 class="text-2xl md:text-3xl font-bold my-6">Notifications</h1>
-            <div class="grid gap-8 mt-10">
-                <div class="rounded-md flex justify-between">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
-                        alt="notification user avatar" class="w-12 h-12 ">
-                    <div class="ml-2 text-sm flex-auto">
-                        <a href="#" class="font-bold hover:text-blue">Mark Webber</a>
-                        <span class="text-darkgb">reacted to your recent post</span>
-                        <a href="#" class="font-bold text-darkgb cursor-pointer hover:text-blue">My first tournament
-                            today!</a>
-                        <span id="notification-ping">
-                            <span class="absolute inline-block rounded-full mt-2 ml-1 p-1 bg-red"> </span>
-                            <span class="relative inline-block animate-ping rounded-full ml-1 p-1 bg-red"> </span>
-                        </span>
-                        <p class="text-gb mt-1">1m ago</p>
+        <div class="max-w-screen-2xl w-full mx-auto px-4 lg:px-10 py-4 mb-3 min-h-screen">
+            <div class="grid lg:grid-cols-[380px_1fr] mt-10 border-4 border-black">
+                <div class="border-b-4 border-black grid divide-y-4 divide-black self-start">
+                    <h1 class="text-2xl md:text-3xl font-bold p-4 min-h-[72px] bg-[#650a27] text-white">Messages</h1>
+                    <div class="flex gap-2 justify-between items-center p-3 hover:bg-gray-200 cursor-pointer">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
+                            alt="notification user avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-2 flex-auto">
+                            <div class="font-bold">Mark Webber</div>
+                            <div class="line-clamp-1 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ea, ex
+                                harum nostrum placeat exercitationem dicta.</div>
+                            <p class="text-xs">1m ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 justify-between items-center p-3 hover:bg-gray-200 cursor-pointer">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
+                            alt="notification user avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-2 flex-auto">
+                            <div class="font-bold">Mark Webber</div>
+                            <div class="line-clamp-1 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ea, ex
+                                harum nostrum placeat exercitationem dicta.</div>
+                            <p class="text-xs">1m ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 justify-between items-center p-3 hover:bg-gray-200 cursor-pointer">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
+                            alt="notification user avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-2 flex-auto">
+                            <div class="font-bold">Mark Webber</div>
+                            <div class="line-clamp-1 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ea, ex
+                                harum nostrum placeat exercitationem dicta.</div>
+                            <p class="text-xs">1m ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 justify-between items-center p-3 hover:bg-gray-200 cursor-pointer">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
+                            alt="notification user avatar" class="w-12 h-12 rounded-full">
+                        <div class="ml-2 flex-auto">
+                            <div class="font-bold">Mark Webber</div>
+                            <div class="line-clamp-1 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ea, ex
+                                harum nostrum placeat exercitationem dicta.</div>
+                            <p class="text-xs">1m ago</p>
+                        </div>
                     </div>
                 </div>
-                <div class="rounded-md flex justify-between">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
-                        alt="notification user avatar" class="w-12 h-12 ">
-                    <div class="ml-2 text-sm flex-auto">
-                        <a href="#" class="font-bold hover:text-blue">Mark Webber</a>
-                        <span class="text-darkgb">reacted to your recent post</span>
-                        <a href="#" class="font-bold text-darkgb cursor-pointer hover:text-blue">My first tournament
-                            today!</a>
-                        <span id="notification-ping">
-                            <span class="absolute inline-block rounded-full mt-2 ml-1 p-1 bg-red"> </span>
-                            <span class="relative inline-block animate-ping rounded-full ml-1 p-1 bg-red"> </span>
-                        </span>
-                        <p class="text-gb mt-1">1m ago</p>
+                <div class="h-[600px] border-l-4 border-black flex flex-col">
+                    <div class="border-b-4 border-black p-3 bg-[#650a27] text-white">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
+                            alt="notification user avatar" class="w-12 h-12 rounded-full">
                     </div>
-                </div>
-                <div class="rounded-md flex justify-between">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
-                        alt="notification user avatar" class="w-12 h-12 ">
-                    <div class="ml-2 text-sm flex-auto">
-                        <a href="#" class="font-bold hover:text-blue">Mark Webber</a>
-                        <span class="text-darkgb">reacted to your recent post</span>
-                        <a href="#" class="font-bold text-darkgb cursor-pointer hover:text-blue">My first tournament
-                            today!</a>
-                        <span id="notification-ping">
-                            <span class="absolute inline-block rounded-full mt-2 ml-1 p-1 bg-red"> </span>
-                            <span class="relative inline-block animate-ping rounded-full ml-1 p-1 bg-red"> </span>
-                        </span>
-                        <p class="text-gb mt-1">1m ago</p>
+
+                    <div class="px-3 pt-3 pb-10 flex-1 overflow-y-scroll flex flex-col gap-6">
+                        <div class="self-start max-w-md bg-black text-white p-2 px-3 rounded-md relative">Lorem ipsum dolor,
+                            sit amet
+                            consectetur adipisicing elit. Non cupiditate doloribus
+                            iure corrupti sed sequi dolorem natus consequatur praesentium voluptate.
+                            <span class="text-[10px] absolute -bottom-3.5 right-1.5 text-black">11.12 pm</span>
+                        </div>
+                        <div class="self-end max-w-md bg-[#650a27] text-white p-2 px-3 rounded-md relative">Lorem ipsum
+                            Lorem ipsum dolor sit amet.
+                            <span class="text-[10px] absolute -bottom-3.5 right-1.5 text-black">11.12 pm</span>
+                        </div>
+                        <div class="self-end max-w-md bg-[#650a27] text-white p-2 px-3 rounded-md relative">Lorem ipsum
+                            dolor, sit
+                            amet consectetur adipisicing elit. Non cupiditate doloribus
+                            iure corrupti sed sequi dolorem natus consequatur praesentium voluptate.
+                            <span class="text-[10px] absolute -bottom-3.5 right-1.5 text-black">11.12 pm</span>
+                        </div>
+                        <div class="self-end max-w-md bg-[#650a27] text-white p-2 px-3 rounded-md relative">Lorem ipsum
+                            dolor, sit
+                            amet consectetur adipisicing elit. Non cupiditate doloribus
+                            iure corrupti sed sequi dolorem natus consequatur praesentium voluptate.
+                            <span class="text-[10px] absolute -bottom-3.5 right-1.5 text-black">11.12 pm</span>
+                        </div>
+                        <div class="self-end max-w-md bg-[#650a27] text-white p-2 px-3 rounded-md relative">Lorem ipsum
+                            dolor, sit
+                            amet consectetur adipisicing elit. Non cupiditate doloribus
+                            iure corrupti sed sequi dolorem natus consequatur praesentium voluptate.
+                            <span class="text-[10px] absolute -bottom-3.5 right-1.5 text-black">11.12 pm</span>
+                        </div>
+                        <div class="self-start max-w-md bg-black text-white p-2 px-3 rounded-md relative">
+                            Ok
+                            <span class="text-[10px] absolute -bottom-3.5 right-1.5 text-black">11.12 pm</span>
+                        </div>
                     </div>
-                </div>
-                <div class="rounded-md flex justify-between">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
-                        alt="notification user avatar" class="w-12 h-12 ">
-                    <div class="ml-2 text-sm flex-auto">
-                        <a href="#" class="font-bold hover:text-blue">Mark Webber</a>
-                        <span class="text-darkgb">reacted to your recent post</span>
-                        <a href="#" class="font-bold text-darkgb cursor-pointer hover:text-blue">My first tournament
-                            today!</a>
-                        <span id="notification-ping">
-                            <span class="absolute inline-block rounded-full mt-2 ml-1 p-1 bg-red"> </span>
-                            <span class="relative inline-block animate-ping rounded-full ml-1 p-1 bg-red"> </span>
-                        </span>
-                        <p class="text-gb mt-1">1m ago</p>
+
+                    <div class="flex p-3 border-t-4 gap-2 border-black">
+                        <input placeholder="Type a Message" class="p-3 border-4 flex-1 border-black" type="text">
+                        <button class="relative overflow-hidden w-14 flex justify-center items-center">
+                            <input type="file" class="opacity-0 absolute h-full w-full left-0 top-0 cursor-pointer">
+                            <img src="./assets/images/icons/attach-file.png" class="h-8" alt="">
+                        </button>
+                        <button class="bg-[#650a27] pr-2.5 w-14 flex justify-center items-center">
+                            <img src="./assets/images/icons/send.png" class="h-7 rotate-45" alt="">
+                        </button>
                     </div>
-                </div>
-                <div class="rounded-md flex justify-between">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
-                        alt="notification user avatar" class="w-12 h-12 ">
-                    <div class="ml-2 text-sm flex-auto">
-                        <a href="#" class="font-bold hover:text-blue">Mark Webber</a>
-                        <span class="text-darkgb">reacted to your recent post</span>
-                        <a href="#" class="font-bold text-darkgb cursor-pointer hover:text-blue">My first tournament
-                            today!</a>
-                        <span id="notification-ping">
-                            <span class="absolute inline-block rounded-full mt-2 ml-1 p-1 bg-red"> </span>
-                            <span class="relative inline-block animate-ping rounded-full ml-1 p-1 bg-red"> </span>
-                        </span>
-                        <p class="text-gb mt-1">1m ago</p>
-                    </div>
-                </div>
-                <div class="rounded-md flex justify-between">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ"
-                        alt="notification user avatar" class="w-12 h-12 ">
-                    <div class="ml-2 text-sm flex-auto">
-                        <a href="#" class="font-bold hover:text-blue">Mark Webber</a>
-                        <span class="text-darkgb">reacted to your recent post</span>
-                        <a href="#" class="font-bold text-darkgb cursor-pointer hover:text-blue">My first tournament
-                            today!</a>
-                        <span id="notification-ping">
-                            <span class="absolute inline-block rounded-full mt-2 ml-1 p-1 bg-red"> </span>
-                            <span class="relative inline-block animate-ping rounded-full ml-1 p-1 bg-red"> </span>
-                        </span>
-                        <p class="text-gb mt-1">1m ago</p>
-                    </div>
+
                 </div>
             </div>
         </div>
