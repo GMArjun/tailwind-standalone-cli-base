@@ -256,7 +256,7 @@
     <!-- How it Works -->
     <div class="max-w-screen-2xl w-full mx-auto">
       <div class="bg-gradient-to-l from-[#f8dfb7] border-dashed border-t-4 border-b-4 border-black">
-        <div class="py-20 px-10 flex flex-col justify-center gap-20">
+        <div class="py-20 px-4 lg:px-10 flex flex-col justify-center gap-10 lg:gap-20">
           <div class="text-center mt-auto">
             <h1 class="font-bold text-xl md:text-3xl lg:text-4xl mb-3">
               Comment ça marche ?
@@ -267,7 +267,7 @@
               <div class="flex flex-col justify-center items-center gap-10">
                 <img src="./assets/images/static/comment_1.png" class="h-[160px] object-contain" alt="comment_1">
                 <div class="text-center">
-                  <p class="text-2xl font-bold mb-2">Crée ton Profil Digital</p>
+                  <p class="text-xl lg:text-2xl font-bold mb-2">Crée ton Profil Digital</p>
                   <p>Inscrit toi à la plateforme quelques clics et devient
                     un talent Cool Casting</p>
                 </div>
@@ -275,7 +275,7 @@
               <div class="flex flex-col justify-center items-center gap-10">
                 <img src="./assets/images/static/comment_2.jpeg" class="h-[160px] object-contain" alt="comment_2">
                 <div class="text-center">
-                  <p class="text-2xl font-bold mb-2">Postule aux castings</p>
+                  <p class="text-xl lg:text-2xl font-bold mb-2">Postule aux castings</p>
                   <p>Pendant 1 an, envois ton profil à des professionnels
                     qui proposent des rôles dans leurs productions. </p>
                 </div>
@@ -283,19 +283,112 @@
               <div class="flex flex-col justify-center items-center gap-10">
                 <img src="./assets/images/static/comment_3.jpeg" class="h-[160px] object-contain" alt="comment_3">
                 <div class="text-center">
-                  <p class="text-2xl font-bold mb-2">Boost ta carrière !</p>
+                  <p class="text-xl lg:text-2xl font-bold mb-2">Boost ta carrière !</p>
                   <p>Les professionnels intéressés te contactent pour
                     des rendez-vous et de nouveaux contrats.</p>
                 </div>
               </div>
             </div>
           </div>
-          <p class="text-2xl mt-auto text-center">Postuler pour un rôle n’a jamais été aussi simple</p>
+          <p class="lg:text-2xl mt-auto text-center">Postuler pour un rôle n’a jamais été aussi simple</p>
         </div>
       </div>
     </div>
 
+
+    <!-- Payment Gateway -->
+
+    <div class="bg-gradient-to-r from-green-100 via-white to-green-100">
+      <div class="py-16 px-4">
+        <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl text-center">
+          Souscrit à COOL CASTING
+        </h1>
+        <p class="font-bold text-2xl md:text-3xl text-center mt-3">et postule aux casting sans limite pendant 1 an !</p>
+
+        <div class="my-8 max-w-xs w-full mx-auto">
+          <p class="text-center text-xl">Tu as un code de réduction?</p>
+          <input class="border border-gray-500 p-3 w-full my-3" placeholder="Entrer code promo" type="text">
+          <p class="text-center text-xl">Code appliqué !</p>
+        </div>
+
+        <h1 class="font-bold text-xl md:text-3xl text-center my-10">Total à payer :
+          <span class="font-bold text-2xl md:text-3xl lg:text-4xl text-center">
+            <span class="line-through text-[#970f53]">9500F</span>
+            8000F cfa
+          </span>
+        </h1>
+
+        <div class="max-w-3xl w-full mx-auto">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="grid gap-3">
+              <div class="w-full">
+                <p class="mb-1">Payer pare carte bancaire</p>
+                <input class="border border-gray-500 p-3 w-full" placeholder="Numbero de carte" type="text">
+              </div>
+              <div class="flex gap-3 w-full">
+                <input class="border border-gray-500 p-3 w-full" placeholder="Nom" type="text">
+                <input class="border border-gray-500 p-3 w-20" placeholder="01/01" type="text">
+                <input class="border border-gray-500 p-3 w-20" placeholder="CVV" type="text">
+              </div>
+            </div>
+            <div class="h-0.5 md:h-16 bg-black w-40 md:w-0.5 mx-20 my-10 md:my-0"></div>
+            <div>
+              <p class="mb-1">Ou Mobile Money</p>
+              <div class="grid gap-3">
+                <button class="bg-[#fe7700] text-white p-2 px-4 rounded-full w-[300px]">Payer avec Orange Money</button>
+                <button class="bg-[#01a1fe] text-white p-2 px-4 rounded-full w-[300px]">Payer avec Wave</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Payment -->
+    <div class="min-h-screen flex justify-center items-center flex-col px-4 gap-8 text-center">
+      <img class="h-40" src="./assets/images/icons/success_payment.png" alt="">
+      <h1 class="font-bold text-xl md:text-3xl lg:text-4xl">Paiement accepté.</h1>
+      <p>Félicitations ! Vous pouvez maintenant compléter votre profil et postuler aux castings.</p>
+      <button class="lg:text-xl mt-16 bg-black text-white p-3 rounded-full min-w-64">
+        C’est parti !
+      </button>
+    </div>
+
+    <!-- Failure Payment -->
+    <div class="min-h-screen flex justify-center items-center flex-col px-4 gap-8 text-center">
+      <img class="h-40" src="./assets/images/icons/failure_payment.png" alt="">
+      <h1 class="font-bold text-xl md:text-3xl lg:text-4xl">Oups !</h1>
+      <p>Le paiement n’a pas pu être effectué.</p>
+      <button class="lg:text-xl mt-16 bg-black text-white p-3 rounded-full min-w-64">
+        Retour
+      </button>
+    </div>
+
   </main>
+
+  <footer class="bg-[#f8f7f9]">
+    <div class="max-w-screen-2xl w-full mx-auto py-5 px-4 lg:px-10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 items-end">
+            <div class="grid gap-6">
+                <img class="h-16" src="./assets/images/icons/logo.png" alt="logo" />
+                <a href="#" class="font-bold">Contacts</a>
+            </div>
+            <div class="grid gap-6">
+                <a href="#" class="font-bold">À savoir</a>
+                <a href="#" class="font-bold">Services et tarifs</a>
+            </div>
+            <div class="grid gap-6">
+                <a href="#" class="font-bold">Conditions général d’utilisations</a>
+                <a href="#" class="font-bold">Politique de confidentialité</a>
+            </div>
+            <div class="grid gap-6">
+                <a href="#" class="font-bold">Mentions légales</a>
+                <a href="#" class="font-bold">Désinscription</a>
+            </div>
+        </div>
+        <p class="text-center mt-8 text-xs">©2024 Cool Casting Sénégal. Tous droits réservés</p>
+    </div>
+</footer>
 
 
 
