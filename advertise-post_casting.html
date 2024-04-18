@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/selectize.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/skeletabs.css">
+    <link rel="stylesheet" href="./assets/css/prettydropdown.css">
+    <link rel="stylesheet" href="./assets/css/jquery.modal.min.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+</head>
+
+<body>
+    <header class="border-b-4 border-black top-0 sticky z-10 bg-white">
+        <div class="max-w-screen-2xl w-full mx-auto flex items-center gap-5 py-3 px-4 lg:px-10 justify-between">
+            <img class="h-16 hidden lg:block" src="./assets/images/icons/logo.png" alt="logo" />
+            <img class="h-12 lg:hidden" src="./assets/images/icons/logo_simple.png" alt="logo" />
+            <div class="gap-10 flex-shrink-0 hidden lg:flex">
+                <a href="#" class="lg:text-xl">Tableau de bord</a>
+                <a href="#" class="lg:text-xl font-bold">Poster un Casting</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="font-bold truncate hidden sm:block">Customer Name</span>
+                <div class="dropdown-container relative inline-block text-left">
+                    <button type="button" class="dropdown-button ">
+                        <img class="h-14 flex-shrink-0"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ&s"
+                            alt="profile">
+                    </button>
+                    <div
+                        class="dropdown-menu hidden origin-top-right absolute overflow-hidden right-0 min-w-[100px] rounded-md shadow-lg bg-[#650a27] text-white">
+                        <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Tableau de bord</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Poster un Casting</a>
+                            <a href="#" class="whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">
+                                Profil</a>
+                            <a href="#" class=" whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </header>
+    <main>
+        <div class="text-center bg-[#650a27] text-white text-xl md:text-2xl p-4 font-bold">NOUVEAU CASTING</div>
+
+        <div class="max-w-screen-lg w-full mx-auto px-4 lg:px-10 my-16">
+            <h1 class="text-2xl md:text-3xl font-bold mb-5">Titre*</h1>
+            <div class="grid gap-4 lg:gap-6">
+                <div class="form-group overflow-hidden">
+                    <div class="flex flex-col">
+                        <label for="height" class="mb-2 font-bold truncate">Ajouter un titre captivant qui
+                            retient
+                            l’attention des talents</label>
+                        <input placeholder="Ajouter un titre captivant qui retient l’attention des talents" id="height"
+                            class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                            type="text">
+                    </div>
+                </div>
+                <div class="form-group overflow-hidden">
+                    <div class="flex flex-col">
+                        <label for="height" class="mb-2 font-bold truncate">Description du projet*</label>
+                        <input placeholder="Description du projet*" id="height"
+                            class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                            type="text">
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Type of production*</label>
+                            <input placeholder="Type of production*" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Talent recherché*</label>
+                            <input placeholder="Talent recherché*" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="gender" class="mb-2 font-bold truncate">Sexe*</label>
+                            <select id="gender" class="pretty">
+                                <option selected disabled value="">Select</option>
+                                <option value="Male">Value 1</option>
+                                <option value="Female">Value 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Age</label>
+                            <input placeholder="Age" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Couleur de peau</label>
+                            <input placeholder="Couleur de peau" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Taille</label>
+                            <input placeholder="Taille" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Morphologie</label>
+                            <input placeholder="Morphologie" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Langues parlées</label>
+                            <input placeholder="Langues parlées" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Communauté (Nombre
+                                d’abonnés)</label>
+                            <input placeholder="Communauté (Nombre d’abonnés)" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Rémunération*</label>
+                            <input placeholder="Rémunération*" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Ville ( 1er rendez-vous
+                                physique)</label>
+                            <input placeholder="Ville ( 1er rendez-vous physique)" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="form-group overflow-hidden">
+                        <div class="flex flex-col">
+                            <label for="height" class="mb-2 font-bold truncate">Date de fin du casting*</label>
+                            <input placeholder="Date de fin du casting*" id="height"
+                                class="p-3 border-4 border-black text-xl disabled:bg-gray-200 disabled:cursor-not-allowed"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-4 border-black aspect-video relative">
+                    <input type="file" accept="video/*"
+                        class="profile-video-uploader absolute top-0 left-0 h-full w-full z-10 opacity-0 cursor-pointer">
+                    <div
+                        class="profile-video-uploader-placeholder absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                        <img class="h-auto w-28 flex-shrink-0 self-center"
+                            src="https://static.thenounproject.com/png/556238-200.png" alt="img">
+                    </div>
+                    <video id="uploaded-video" class="absolute h-full w-full object-cover z-0 hidden">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="flex justify-end mt-3">
+                    <button class="text-xl bg-black text-[#aef98c] p-2.5 rounded-full w-52">
+                        Soumettre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#f8f7f9]">
+        <div class="max-w-screen-2xl w-full mx-auto py-5 px-4 lg:px-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 items-end">
+                <div class="grid gap-6">
+                    <img class="h-16" src="./assets/images/icons/logo.png" alt="logo" />
+                    <a href="#" class="font-bold">Contacts</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">À savoir</a>
+                    <a href="#" class="font-bold">Services et tarifs</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">Conditions général d’utilisations</a>
+                    <a href="#" class="font-bold">Politique de confidentialité</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">Mentions légales</a>
+                    <a href="#" class="font-bold">Désinscription</a>
+                </div>
+            </div>
+            <p class="text-center mt-8 text-xs">©2024 Cool Casting Sénégal. Tous droits réservés</p>
+        </div>
+    </footer>
+
+</body>
+<script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+<script src="./assets/js/selectize.min.js"></script>
+<script src="./assets/js/selectize-config.js"></script>
+
+<script src="./assets/js/skeletabs.js"></script>
+<script>
+    $('#profile-container').skeletabs({
+        history: false,
+        startIndex: 0,
+        transitionDuration: 200
+    })
+</script>
+
+<script>
+    // Script for File Uploader
+    $(document).ready(function () {
+        $('.profile-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            const $uploadedImage = $(this).siblings('.profile-uploaded-image');
+            const $placeholder = $(this).siblings('.profile-uploader-placeholder');
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $uploadedImage
+                        .css('background-image', `url(${e.target.result})`)
+                        .removeClass('hidden');
+
+                    $placeholder.addClass('hidden');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+    // Script for Video Uploader
+    $(document).ready(function () {
+        $('.profile-video-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            const video = $('#uploaded-video')[0];
+            const videoPlaceholder = $('.profile-video-uploader-placeholder');
+
+            if (file && file.type.startsWith('video/')) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    video.src = e.target.result;
+                    video.classList.remove('hidden');
+                    videoPlaceholder.addClass('hidden');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+
+
+</script>
+
+<script src="./assets/js/prettydropdown.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.pretty').prettyDropdown({
+            classic: true
+        });
+    });
+</script>
+
+
+<script>
+    // script for dropdown
+    $(document).ready(function () {
+        $(document).on('click', '.dropdown-button', function () {
+            var dropdownMenu = $(this).next('.dropdown-menu');
+            dropdownMenu.toggleClass('hidden');
+        });
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown-container').length) {
+                $('.dropdown-menu').addClass('hidden');
+            }
+        });
+        $(document).on('click', '.dropdown-menu a', function () {
+            $('.dropdown-menu').addClass('hidden');
+        });
+    });
+
+</script>
+
+<script src="./assets/js/jquery.modal.min.js"></script>
+
+</html>
