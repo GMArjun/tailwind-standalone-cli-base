@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/selectize.default.min.css" />
     <link rel="stylesheet" href="./assets/css/skeletabs.css">
     <link rel="stylesheet" href="./assets/css/prettydropdown.css">
+    <link rel="stylesheet" href="./assets/css/jquery.modal.min.css" />
     <link rel="stylesheet" href="./assets/css/global.css" />
 </head>
 
@@ -18,7 +18,20 @@
             <img class="h-16 hidden lg:block" src="./assets/images/icons/logo.png" alt="logo" />
             <img class="h-12 lg:hidden" src="./assets/images/icons/logo_simple.png" alt="logo" />
             <div class="gap-10 flex-shrink-0 hidden lg:flex">
-                <a href="#" class="lg:text-xl">Castings</a>
+                <div class="dropdown-container relative inline-block text-left">
+                    <button type="button" class="dropdown-button lg:text-xl">
+                        Castings
+                    </button>
+                    <div
+                        class="dropdown-menu  hidden left-1/2 -translate-x-1/2 absolute mt-4 overflow-hidden min-w-[100px] rounded-md shadow-lg bg-[#650a27] text-white">
+                        <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
+                            <a href="#" class="whitespace-nowrap text-center px-4 py-2 hover:bg-black "
+                                role="menuitem">Casting View</a>
+                            <a href="#" class="whitespace-nowrap text-center px-4 py-2 hover:bg-black"
+                                role="menuitem">Castings History</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#" class="lg:text-xl font-bold">Mon Profil</a>
             </div>
             <div class="flex items-center gap-3">
@@ -30,14 +43,15 @@
                             alt="profile">
                     </button>
                     <div
-                        class="dropdown-menu hidden origin-top-right absolute overflow-hidden right-0 min-w-[100px] rounded-md shadow-lg bg-white ">
+                        class="dropdown-menu hidden origin-top-right absolute overflow-hidden right-0 min-w-[100px] rounded-md shadow-lg bg-[#650a27] text-white">
                         <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
-                            <a href="#" class="lg:hidden whitespace-nowrap text-center px-4 py-2 hover:bg-gray-100"
-                                role="menuitem">Castings</a>
-                            <a href="#" class="lg:hidden whitespace-nowrap text-center px-4 py-2 hover:bg-gray-100"
-                                role="menuitem">Mon Profil</a>
-                            <a href="#" class=" whitespace-nowrap text-center px-4 py-2 hover:bg-gray-100"
-                                role="menuitem">Logout</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Castings View</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Castings History</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">Mon
+                                Profil</a>
+                            <a href="#" class=" whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -477,5 +491,7 @@
     });
 
 </script>
+
+<script src="./assets/js/jquery.modal.min.js"></script>
 
 </html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/selectize.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/skeletabs.css">
+    <link rel="stylesheet" href="./assets/css/prettydropdown.css">
+    <link rel="stylesheet" href="./assets/css/jquery.modal.min.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+</head>
+
+<body>
+    <header class="border-b-4 border-black top-0 sticky z-10 bg-white">
+        <div class="max-w-screen-2xl w-full mx-auto flex items-center gap-5 py-3 px-4 lg:px-10 justify-between">
+            <img class="h-16 hidden lg:block" src="./assets/images/icons/logo.png" alt="logo" />
+            <img class="h-12 lg:hidden" src="./assets/images/icons/logo_simple.png" alt="logo" />
+            <div class="gap-10 flex-shrink-0 hidden lg:flex">
+                <div class="dropdown-container relative inline-block text-left">
+                    <button type="button" class="dropdown-button lg:text-xl font-bold">
+                        Castings
+                    </button>
+                    <div
+                        class="dropdown-menu  hidden left-1/2 -translate-x-1/2 absolute mt-4 overflow-hidden min-w-[100px] rounded-md shadow-lg bg-[#650a27] text-white">
+                        <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
+                            <a href="#" class="whitespace-nowrap text-center px-4 py-2 hover:bg-black"
+                                role="menuitem">Casting View</a>
+                            <a href="#" class="whitespace-nowrap text-center px-4 py-2 hover:bg-black font-bold"
+                                role="menuitem">Castings History</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="lg:text-xl">Mon Profil</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="font-bold truncate hidden sm:block">Customer Name</span>
+                <div class="dropdown-container relative inline-block text-left">
+                    <button type="button" class="dropdown-button ">
+                        <img class="h-14 flex-shrink-0"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ&s"
+                            alt="profile">
+                    </button>
+                    <div
+                        class="dropdown-menu hidden origin-top-right absolute overflow-hidden right-0 min-w-[100px] rounded-md shadow-lg bg-[#650a27] text-white">
+                        <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Castings View</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Castings History</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">Mon
+                                Profil</a>
+                            <a href="#" class=" whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </header>
+    <main>
+        <div class="use-drop" id="profile-container">
+            <div class="bg-[#650a27]">
+                <div class="max-w-screen-2xl w-full mx-auto px-4 lg:px-10 py-8 mb-3 overflow-x-auto">
+                    <div class="flex gap-8">
+                        <button
+                            class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-yellow-400  border-yellow-400">Région</button>
+                        <button
+                            class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black">Talent</button>
+                        <button
+                            class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black">Sexe</button>
+                        <button
+                            class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black">Age</button>
+                        <button
+                            class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black">Production</button>
+                        <button
+                            class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black">Rémunération</button>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-screen-2xl w-full mx-auto px-4 lg:px-10">
+                <div class="min-h-screen">
+                    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 my-10">
+                        <div class="border-4 border-black p-4">
+                            <div class="grid grid-cols-3 justify-items-center">
+                                <a href="#" class="justify-self-start"><img class="h-10"
+                                        src="./assets/images/icons/delete.png" alt=""></a>
+                                <img class="h-12" src="./assets/images/icons/canal_plus.png" alt="">
+                                <a href="#" class="justify-self-end relative -top-2 -right-2">
+                                    <img class="h-12" src="./assets/images/icons/share.png" alt="">
+                                </a>
+                            </div>
+                            <p class="font-bold text-center my-4">MARODI TV RECHERCHE DES COMÉDIENS
+                                POUR UNE SÉRIE DIFFUSÉE SUR DES
+                                CHAINES RÉGIONALES</p>
+                            <div class="grid gap-y-4">
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Ville</div>
+                                        <div class="font-bold truncate">Dakar</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Type</div>
+                                        <div class="font-bold truncate">Series (Fiction)</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Talent recherché</div>
+                                        <div class="font-bold truncate">COMÉDIEN</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Sexe</div>
+                                        <div class="font-bold truncate">Tout</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Rémunération</div>
+                                        <div class="font-bold truncate">25 000f /jour</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Age</div>
+                                        <div class="font-bold truncate">+18</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="border-2 border-black aspect-video relative overflow-hidden">
+                                        <img class="object-contain h-full w-full"
+                                            src="./assets/images/static/card_video_placeholder.png" alt="">
+                                    </div>
+                                    <p class="text-right mt-1">FIN : <span class="font-bold">Dans 9 jours</span></p>
+                                </div>
+                                <div class="flex justify-center gap-2 text-xl items-center font-bold">
+                                    <div class="text-base">Status:</div>
+                                    <div class=" text-red-500">REJECTED</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-4 border-black p-4">
+                            <div class="grid grid-cols-3 justify-items-center">
+                                <a href="#" class="justify-self-start"><img class="h-10"
+                                        src="./assets/images/icons/delete.png" alt=""></a>
+                                <img class="h-12 col-start-2" src="./assets/images/icons/casting_default.png" alt="">
+                                <a href="#" class="justify-self-end relative -top-2 -right-2">
+                                    <img class="h-12" src="./assets/images/icons/share.png" alt="">
+                                </a>
+                            </div>
+                            <p class="font-bold text-center my-4">MARODI TV RECHERCHE DES COMÉDIENS
+                                POUR UNE SÉRIE DIFFUSÉE SUR DES
+                                CHAINES RÉGIONALES</p>
+                            <div class="grid gap-y-4">
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Ville</div>
+                                        <div class="font-bold truncate">Dakar</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Type</div>
+                                        <div class="font-bold truncate">Series (Fiction)</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Talent recherché</div>
+                                        <div class="font-bold truncate">COMÉDIEN</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Sexe</div>
+                                        <div class="font-bold truncate">Tout</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Rémunération</div>
+                                        <div class="font-bold truncate">25 000f /jour</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Age</div>
+                                        <div class="font-bold truncate">+18</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="border-2 border-black aspect-video relative overflow-hidden">
+                                        <video class="h-full w-full object-cover"
+                                            src="./assets/videos/big_buck_bunny_720p_1mb.mp4" controls></video>
+                                    </div>
+                                    <p class="text-right mt-1">FIN : <span class="font-bold">Dans 9 jours</span></p>
+                                </div>
+                                <div class="flex justify-center gap-2 text-xl items-center font-bold">
+                                    <div class="text-base">Status:</div>
+                                    <div class=" text-green-500">CONTACTED</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-4 border-black p-4">
+                            <div class="grid grid-cols-3 justify-items-center">
+                                <a href="#" class="justify-self-start"><img class="h-10"
+                                        src="./assets/images/icons/delete.png" alt=""></a>
+                                <img class="h-12 col-start-2" src="./assets/images/icons/casting_default.png" alt="">
+                                <a href="#" class="justify-self-end relative -top-2 -right-2">
+                                    <img class="h-12" src="./assets/images/icons/share.png" alt="">
+                                </a>
+                            </div>
+                            <p class="font-bold text-center my-4">MARODI TV RECHERCHE DES COMÉDIENS
+                                POUR UNE SÉRIE DIFFUSÉE SUR DES
+                                CHAINES RÉGIONALES</p>
+                            <div class="grid gap-y-4">
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Ville</div>
+                                        <div class="font-bold truncate">Dakar</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Type</div>
+                                        <div class="font-bold truncate">Series (Fiction)</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Talent recherché</div>
+                                        <div class="font-bold truncate">COMÉDIEN</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Sexe</div>
+                                        <div class="font-bold truncate">Tout</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 border-2 border-black">
+                                    <div class="border-r-2 border-black p-2">
+                                        <div class="text-sm">Rémunération</div>
+                                        <div class="font-bold truncate">25 000f /jour</div>
+                                    </div>
+                                    <div class="p-2 truncate">
+                                        <div class="text-sm">Age</div>
+                                        <div class="font-bold truncate">+18</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="border-2 border-black aspect-video relative overflow-hidden">
+                                        <video class="h-full w-full object-cover"
+                                            src="./assets/videos/big_buck_bunny_720p_1mb.mp4" controls></video>
+                                    </div>
+                                    <p class="text-right mt-1">FIN : <span class="font-bold">Dans 9 jours</span></p>
+                                </div>
+                                <div class="flex justify-center gap-2 text-xl items-center font-bold">
+                                    <div class="text-base">Status:</div>
+                                    <div class=" text-blue-500">PENDING</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#f8f7f9]">
+        <div class="max-w-screen-2xl w-full mx-auto py-5 px-4 lg:px-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 items-end">
+                <div class="grid gap-6">
+                    <img class="h-16" src="./assets/images/icons/logo.png" alt="logo" />
+                    <a href="#" class="font-bold">Contacts</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">À savoir</a>
+                    <a href="#" class="font-bold">Services et tarifs</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">Conditions général d’utilisations</a>
+                    <a href="#" class="font-bold">Politique de confidentialité</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">Mentions légales</a>
+                    <a href="#" class="font-bold">Désinscription</a>
+                </div>
+            </div>
+            <p class="text-center mt-8 text-xs">©2024 Cool Casting Sénégal. Tous droits réservés</p>
+        </div>
+    </footer>
+
+</body>
+<script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+<script src="./assets/js/selectize.min.js"></script>
+<script src="./assets/js/selectize-config.js"></script>
+
+<script src="./assets/js/skeletabs.js"></script>
+<script>
+    $('#profile-container').skeletabs({
+        history: false,
+        startIndex: 0,
+        transitionDuration: 200
+    })
+</script>
+
+<script>
+    // Script for File Uploader
+    $(document).ready(function () {
+        $('.profile-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            const $uploadedImage = $(this).siblings('.profile-uploaded-image');
+            const $placeholder = $(this).siblings('.profile-uploader-placeholder');
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $uploadedImage
+                        .css('background-image', `url(${e.target.result})`)
+                        .removeClass('hidden');
+
+                    $placeholder.addClass('hidden');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+    // Script for Video Uploader
+    $(document).ready(function () {
+        $('.profile-video-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            const video = $('#uploaded-video')[0];
+            const videoPlaceholder = $('.profile-video-uploader-placeholder');
+
+            if (file && file.type.startsWith('video/')) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    video.src = e.target.result;
+                    video.classList.remove('hidden');
+                    videoPlaceholder.addClass('hidden');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+
+
+</script>
+
+<script src="./assets/js/prettydropdown.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.pretty').prettyDropdown({
+            classic: true
+        });
+    });
+</script>
+
+
+<script>
+    // script for dropdown
+    $(document).ready(function () {
+        $(document).on('click', '.dropdown-button', function () {
+            var dropdownMenu = $(this).next('.dropdown-menu');
+            dropdownMenu.toggleClass('hidden');
+        });
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown-container').length) {
+                $('.dropdown-menu').addClass('hidden');
+            }
+        });
+        $(document).on('click', '.dropdown-menu a', function () {
+            $('.dropdown-menu').addClass('hidden');
+        });
+    });
+
+</script>
+
+<script src="./assets/js/jquery.modal.min.js"></script>
+
+</html>
