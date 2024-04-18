@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/selectize.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/skeletabs.css">
+    <link rel="stylesheet" href="./assets/css/prettydropdown.css">
+    <link rel="stylesheet" href="./assets/css/jquery.modal.min.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+</head>
+
+<body>
+    <header class="border-b-4 border-black top-0 sticky z-10 bg-white">
+        <div class="max-w-screen-2xl w-full mx-auto flex items-center gap-5 py-3 px-4 lg:px-10 justify-between">
+            <img class="h-16 hidden lg:block" src="./assets/images/icons/logo.png" alt="logo" />
+            <img class="h-12 lg:hidden" src="./assets/images/icons/logo_simple.png" alt="logo" />
+            <div class="gap-10 flex-shrink-0 hidden lg:flex">
+                <a href="#" class="lg:text-xl font-bold">Tableau de bord</a>
+                <a href="#" class="lg:text-xl">Poster un Casting</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="font-bold truncate hidden sm:block">Customer Name</span>
+                <div class="dropdown-container relative inline-block text-left">
+                    <button type="button" class="dropdown-button ">
+                        <img class="h-14 flex-shrink-0"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGd54hSGC4Ig1fZ4ahKQ2H9Ne_-uGP93fJ4TWrHj3rQ&s"
+                            alt="profile">
+                    </button>
+                    <div
+                        class="dropdown-menu hidden origin-top-right absolute overflow-hidden right-0 min-w-[100px] rounded-md shadow-lg bg-[#650a27] text-white">
+                        <div class="grid overflow-hidden" role="menu" aria-orientation="vertical">
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Tableau de bord</a>
+                            <a href="#" class="lg:hidden whitespace-nowrap px-4 py-2 hover:bg-black"
+                                role="menuitem">Poster un Casting</a>
+                            <a href="#" class="whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">
+                                Profil</a>
+                            <a href="#" class=" whitespace-nowrap px-4 py-2 hover:bg-black" role="menuitem">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </header>
+    <main>
+        <div class="text-center bg-[#650a27] text-white text-xl md:text-2xl p-4"></div>
+
+        <div class="max-w-screen-2xl w-full mx-auto px-4 lg:px-10 my-16">
+            <div class="grid xl:grid-cols-[280px_1fr] gap-10 ">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold">Filtrer les résultats</h1>
+                    <div class="flex flex-wrap flex-row xl:flex-col xl:flex-nowrap gap-3 mt-4">
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Region</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Talent</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Sexe</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Age</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Taille</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Morphologie</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Couleur de la peau</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="mb-1">Langues parlées</label>
+                            <div class="small">
+                                <select id="country" class="pretty" customClass="small">
+                                    <option selected disabled value="">Select</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 self-start">
+                    <div
+                        class="border-4 border-black p-3 rounded-md bg-gradient-to-r from-[#e2e9db] via-white to-[#e2e9db]">
+                        <div class="grid xl:grid-cols-2 gap-3">
+                            <div class="aspect-square border-4 border-black relative overflow-hidden rounded-md">
+                                <img class="h-full w-full absolute top-0 left-0 object-cover"
+                                    src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                                    alt="">
+                            </div>
+                            <div class="font-bold text-sm">
+                                Acteur, Model,
+                                Musicien (Guitar),
+                                Influenceur,
+                                comédien, Coiffeur
+                                (Homme),
+                                Beatmaker, Dj
+                                Français, Wolof
+                            </div>
+                            <p class="text-xl font-bold self-center">Omar S.</p>
+                            <div class="grid gap-3 grid-cols-3 justify-items-start">
+                                <button class="border-4 border-black bg-[#a31400] rounded-md p-1">
+                                    <img src="./assets/images/icons/delete_white.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#004b7d] rounded-md p-1">
+                                    <img src="./assets/images/icons/save-file.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#006e00] rounded-md p-1">
+                                    <img src="./assets/images/icons/message.png" class="h-5" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="border-4 border-black p-3 rounded-md bg-gradient-to-r from-[#e2e9db] via-white to-[#e2e9db]">
+                        <div class="grid xl:grid-cols-2 gap-3">
+                            <div class="aspect-square border-4 border-black relative overflow-hidden rounded-md">
+                                <img class="h-full w-full absolute top-0 left-0 object-cover"
+                                    src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                                    alt="">
+                            </div>
+                            <div class="font-bold text-sm">
+                                Acteur, Model,
+                                Musicien (Guitar),
+                                Influenceur,
+                                comédien, Coiffeur
+                                (Homme),
+                                Beatmaker, Dj
+                                Français, Wolof
+                            </div>
+                            <p class="text-xl font-bold self-center">Omar S.</p>
+                            <div class="grid gap-3 grid-cols-3 justify-items-start">
+                                <button class="border-4 border-black bg-[#a31400] rounded-md p-1">
+                                    <img src="./assets/images/icons/delete_white.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#004b7d] rounded-md p-1">
+                                    <img src="./assets/images/icons/save-file.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#006e00] rounded-md p-1">
+                                    <img src="./assets/images/icons/message.png" class="h-5" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="border-4 border-black p-3 rounded-md bg-gradient-to-r from-[#e2e9db] via-white to-[#e2e9db]">
+                        <div class="grid xl:grid-cols-2 gap-3">
+                            <div class="aspect-square border-4 border-black relative overflow-hidden rounded-md">
+                                <img class="h-full w-full absolute top-0 left-0 object-cover"
+                                    src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                                    alt="">
+                            </div>
+                            <div class="font-bold text-sm">
+                                Acteur, Model,
+                                Musicien (Guitar),
+                                Influenceur,
+                                comédien, Coiffeur
+                                (Homme),
+                                Beatmaker, Dj
+                                Français, Wolof
+                            </div>
+                            <p class="text-xl font-bold self-center">Omar S.</p>
+                            <div class="grid gap-3 grid-cols-3 justify-items-start">
+                                <button class="border-4 border-black bg-[#a31400] rounded-md p-1">
+                                    <img src="./assets/images/icons/delete_white.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#004b7d] rounded-md p-1">
+                                    <img src="./assets/images/icons/save-file.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#006e00] rounded-md p-1">
+                                    <img src="./assets/images/icons/message.png" class="h-5" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="border-4 border-black p-3 rounded-md bg-gradient-to-r from-[#e2e9db] via-white to-[#e2e9db]">
+                        <div class="grid xl:grid-cols-2 gap-3">
+                            <div class="aspect-square border-4 border-black relative overflow-hidden rounded-md">
+                                <img class="h-full w-full absolute top-0 left-0 object-cover"
+                                    src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                                    alt="">
+                            </div>
+                            <div class="font-bold text-sm">
+                                Acteur, Model,
+                                Musicien (Guitar),
+                                Influenceur,
+                                comédien, Coiffeur
+                                (Homme),
+                                Beatmaker, Dj
+                                Français, Wolof
+                            </div>
+                            <p class="text-xl font-bold self-center">Omar S.</p>
+                            <div class="grid gap-3 grid-cols-3 justify-items-start">
+                                <button class="border-4 border-black bg-[#a31400] rounded-md p-1">
+                                    <img src="./assets/images/icons/delete_white.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#004b7d] rounded-md p-1">
+                                    <img src="./assets/images/icons/save-file.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#006e00] rounded-md p-1">
+                                    <img src="./assets/images/icons/message.png" class="h-5" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="border-4 border-black p-3 rounded-md bg-gradient-to-r from-[#e2e9db] via-white to-[#e2e9db]">
+                        <div class="grid xl:grid-cols-2 gap-3">
+                            <div class="aspect-square border-4 border-black relative overflow-hidden rounded-md">
+                                <img class="h-full w-full absolute top-0 left-0 object-cover"
+                                    src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                                    alt="">
+                            </div>
+                            <div class="font-bold text-sm">
+                                Acteur, Model,
+                                Musicien (Guitar),
+                                Influenceur,
+                                comédien, Coiffeur
+                                (Homme),
+                                Beatmaker, Dj
+                                Français, Wolof
+                            </div>
+                            <p class="text-xl font-bold self-center">Omar S.</p>
+                            <div class="grid gap-3 grid-cols-3 justify-items-start">
+                                <button class="border-4 border-black bg-[#a31400] rounded-md p-1">
+                                    <img src="./assets/images/icons/delete_white.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#004b7d] rounded-md p-1">
+                                    <img src="./assets/images/icons/save-file.png" class="h-5" alt="">
+                                </button>
+                                <button class="border-4 border-black bg-[#006e00] rounded-md p-1">
+                                    <img src="./assets/images/icons/message.png" class="h-5" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#f8f7f9]">
+        <div class="max-w-screen-2xl w-full mx-auto py-5 px-4 lg:px-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 items-end">
+                <div class="grid gap-6">
+                    <img class="h-16" src="./assets/images/icons/logo.png" alt="logo" />
+                    <a href="#" class="font-bold">Contacts</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">À savoir</a>
+                    <a href="#" class="font-bold">Services et tarifs</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">Conditions général d’utilisations</a>
+                    <a href="#" class="font-bold">Politique de confidentialité</a>
+                </div>
+                <div class="grid gap-6">
+                    <a href="#" class="font-bold">Mentions légales</a>
+                    <a href="#" class="font-bold">Désinscription</a>
+                </div>
+            </div>
+            <p class="text-center mt-8 text-xs">©2024 Cool Casting Sénégal. Tous droits réservés</p>
+        </div>
+    </footer>
+
+</body>
+<script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+<script src="./assets/js/selectize.min.js"></script>
+<script src="./assets/js/selectize-config.js"></script>
+
+<script src="./assets/js/skeletabs.js"></script>
+<script>
+    $('#profile-container').skeletabs({
+        history: false,
+        startIndex: 0,
+        transitionDuration: 200
+    })
+</script>
+
+<script>
+    // Script for File Uploader
+    $(document).ready(function () {
+        $('.profile-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            const $uploadedImage = $(this).siblings('.profile-uploaded-image');
+            const $placeholder = $(this).siblings('.profile-uploader-placeholder');
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $uploadedImage
+                        .css('background-image', `url(${e.target.result})`)
+                        .removeClass('hidden');
+
+                    $placeholder.addClass('hidden');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+    // Script for Video Uploader
+    $(document).ready(function () {
+        $('.profile-video-uploader').on('change', function (e) {
+            const file = e.target.files[0];
+            const video = $('#uploaded-video')[0];
+            const videoPlaceholder = $('.profile-video-uploader-placeholder');
+
+            if (file && file.type.startsWith('video/')) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    video.src = e.target.result;
+                    video.classList.remove('hidden');
+                    videoPlaceholder.addClass('hidden');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+
+
+</script>
+
+<script src="./assets/js/prettydropdown.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.pretty').prettyDropdown({
+            classic: true
+        });
+    });
+</script>
+
+
+<script>
+    // script for dropdown
+    $(document).ready(function () {
+        $(document).on('click', '.dropdown-button', function () {
+            var dropdownMenu = $(this).next('.dropdown-menu');
+            dropdownMenu.toggleClass('hidden');
+        });
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown-container').length) {
+                $('.dropdown-menu').addClass('hidden');
+            }
+        });
+        $(document).on('click', '.dropdown-menu a', function () {
+            $('.dropdown-menu').addClass('hidden');
+        });
+    });
+
+</script>
+
+<script src="./assets/js/jquery.modal.min.js"></script>
+
+</html>
