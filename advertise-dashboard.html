@@ -47,7 +47,27 @@
 
     </header>
     <main>
-        <div class="text-center bg-[#650a27] text-white text-xl md:text-2xl p-4"></div>
+        <div class="text-center bg-[#650a27] text-white p-4">
+            <div class="flex flex-wrap items-center gap-4">
+                <div class="flex-shrink-0">En cours : 4</div>
+                <div class="max-w-44 w-full small">
+                    <select id="country" class="pretty" customClass="small">
+                        <option selected disabled value="">Select</option>
+                        <option value="1">Country 1</option>
+                        <option value="2">Country 2</option>
+                    </select>
+                </div>
+                <button
+                    class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black flex-shrink-0">Tous
+                    les candidate</button>
+                <button
+                    class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black flex-shrink-0">Profils
+                    Enregistrés</button>
+                <button
+                    class="bg-black border-4 py-1 px-4 min-w-40 rounded-xl text-white  border-black flex-shrink-0">Profils
+                    Contactés</button>
+            </div>
+        </div>
 
         <div class="max-w-screen-2xl w-full mx-auto px-4 lg:px-10 my-8 md:my-16">
             <div class="grid xl:grid-cols-[280px_1fr] gap-10">
