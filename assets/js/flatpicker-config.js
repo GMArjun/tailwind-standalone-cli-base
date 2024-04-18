@@ -4,6 +4,7 @@ $(document).ready(function () {
     dateFormat: "d-m-Y",
     position: "center",
     static: true,
+    disableMobile: true,
     onClose: function (selectedDates, dateStr, instance) {
       $("#birthday-picker").text(dateStr);
     },
